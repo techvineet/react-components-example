@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import Modal from 'react-modal';
 
-import ExampleTabs from './components/tabs.jsx'
+import ExampleTabs from './components/Tabs.jsx'
+import DemoCarousel from './components/DemoCarousel.jsx'
+
 import logo from './logo.svg';
 import './App.css';
 
@@ -78,6 +80,10 @@ class App extends Component {
             <button>the modal</button>
           </form>
         </Modal>
+
+        <h3>Image Carousel</h3>
+        <p> Documentation is <a href="https://www.npmjs.com/package/react-responsive-carousel">here</a></p>
+        <DemoCarousel />
       </div>
     );
   }
