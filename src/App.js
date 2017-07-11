@@ -3,6 +3,7 @@ import Modal from 'react-modal';
 
 import ExampleTabs from './components/Tabs.jsx'
 import DemoCarousel from './components/DemoCarousel.jsx'
+import SimpleDropDown from './components/SimpleDropDown.jsx'
 
 import logo from './logo.svg';
 import './App.css';
@@ -84,6 +85,10 @@ class App extends Component {
         <h3>Image Carousel</h3>
         <p> Documentation is <a href="https://www.npmjs.com/package/react-responsive-carousel">here</a></p>
         <DemoCarousel />
+
+        <h3>Simple Dropdown menu</h3>
+        <p> Documentation is <a href="https://github.com/Fauntleroy/react-simple-dropdown">here</a></p>
+        <SimpleDropDown />
       </div>
     );
   }
