@@ -158,7 +158,13 @@ position: relative;
 
 /*##########################################
 // Slider */
-
+.carousel.carousel-slider{
+  border-radius: 8px;
+  overflow: hidden;
+}
+.carousel.carousel-slider .slider-wrapper {
+  border-radius: 8px;
+}
 .carousel.carousel-slider .legend{
   display: none;
 }
