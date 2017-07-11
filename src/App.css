@@ -1,3 +1,46 @@
+/*##########################################
+ !!! Only for this page. do not copy this section! */
+
+ @import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800|Open+Sans:300,400,600,700,800');
+
+
+
+h3{
+  text-align: left;
+}
+
+m-component{
+  display: block;
+  background-color: #fff;
+  padding: 10px;
+
+  box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.05);
+  margin-bottom: 20px;
+}
+m-hide{
+  display: none;
+}
+
+m-component:before,
+m-component:after {
+  content: "";
+  display: table;
+} 
+m-component:after {
+  clear: both;
+}
+m-component {
+  zoom: 1; /* For IE 6/7 (trigger hasLayout) */
+}
+
+.dropdown{
+  float: right;
+}
+
+
+//##########################################
+
+
 .App {
   text-align: center;
 }
@@ -23,15 +66,118 @@
   to { transform: rotate(360deg); }
 }
 
+
+//##########################################
+// Dropdown
+
 .dropdown {
     display: inline-block;
+    position: relative;
+}
+.dropdown.dropdown--active {
+position: relative;
+font-family : 'Montserrat', sans-serif;
+
 }
 
 .dropdown__content {
     display: none;
     position: absolute;
+    z-index: 1000;
+    right: 0;
+    padding-top: 8px;
 }
 
 .dropdown--active .dropdown__content {
     display: block;
 }
+
+.dropdown .dropdown__trigger i{
+  width: 30px;
+  height: 20px;
+  display: inline-block;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 400;
+}
+.dropdown__content ul{
+    background-color: #fff;
+      box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.15);
+min-width: 200px;
+position: relative;
+  border-radius: 6px;
+  padding: 5px 0 5px 20px;
+  
+
+
+}
+
+.dropdown__content ul:before{
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  right: 8px;
+  border: 10px solid #fff;
+  border-color: transparent;
+  border-bottom-color: #fff;
+  width: 0;
+  height: 0;
+
+}
+.dropdown__content ul li{
+  border-bottom: 2px solid #e8e8e8;
+}
+.dropdown__content ul li:last-of-type{
+  border-bottom: none;
+}
+.dropdown__content ul li a{
+  padding: 8px 8px 8px 0;
+  font-family: Montserrat;
+  font-size: 16px;
+  text-align: left;
+  color: #4c4c4c;
+  text-decoration: none;
+  line-height: 1.2;
+  display: -webkit-inline-flex;
+  display: -moz-inline-flex;
+  display: -ms-inline-flex;
+  display: -o-inline-flex;
+  display: inline-flex;
+  min-width: 100%;
+}
+.dropdown__content ul li a i{
+  margin-right: 8px;
+  font-size: 18px;
+}
+.dropdown__content ul li a i:before{
+  color: #9a9a9a;
+}
+.dropdown__content ul{}
+
+
+
+/*##########################################
+// Slider */
+
+.carousel.carousel-slider .legend{
+  display: none;
+}
+.carousel.carousel-slider .control-arrow{
+  display: none;
+}
+.carousel.carousel-slider .carousel-status{
+  display: none;
+}
+.carousel .control-dots .dot{
+  width: 12px;
+  height: 12px;
+  background: #fff;
+  opacity: 1;
+  margin: 0 4px;
+  vertical-align: middle;
+}
+.carousel .control-dots .dot.selected{
+  width: 16px;
+  height: 16px;
+}
+.carousel.carousel-slider{}

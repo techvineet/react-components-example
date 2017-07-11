@@ -54,41 +54,47 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h2>Welcome to React</h2>
         </div>
-        <h3>Tab Component</h3>
-        <p>To use custom class names please refer to the documentation <a href="https://github.com/reactjs/react-tabs">here</a></p>
-        <ExampleTabs />
-        <hr />
+        <m-hide>
+          <h3>Tab Component</h3>
+          <p>To use custom class names please refer to the documentation <a href="https://github.com/reactjs/react-tabs">here</a></p>
+          <ExampleTabs />
+          <hr />
+        </m-hide>
+
+        <m-component>
+          <h3>Dropdown</h3>
+          <SimpleDropDown />
+        </m-component>
+
+        <m-hide>
         <h3>Modal Dialog Box component</h3>
-        <p>To use custom class names please refer to the documentation <a href="https://reactcommunity.org/react-modal/">here</a></p>
-        <button onClick={this.openModal}>Open Modal</button>
+          <button onClick={this.openModal}>Open Modal</button>
 
-        <Modal
-          isOpen={this.state.modalIsOpen}
-          onAfterOpen={this.afterOpenModal}
-          onRequestClose={this.closeModal}
-          style={customStyles}
-          contentLabel="Example Modal"
-        >
+          <Modal
+            isOpen={this.state.modalIsOpen}
+            onAfterOpen={this.afterOpenModal}
+            onRequestClose={this.closeModal}
+            style={customStyles}
+            contentLabel="Example Modal"
+          >
 
-          <h2 ref={subtitle => this.subtitle = subtitle}>Hello</h2>
-          <button onClick={this.closeModal}>close</button>
-          <div>I am a modal</div>
-          <form>
-            <input />
-            <button>tab navigation</button>
-            <button>stays</button>
-            <button>inside</button>
-            <button>the modal</button>
-          </form>
-        </Modal>
+            <h2 ref={subtitle => this.subtitle = subtitle}>Hello</h2>
+            <button onClick={this.closeModal}>close</button>
+            <div>I am a modal</div>
+            <form>
+              <input />
+              <button>tab navigation</button>
+              <button>stays</button>
+              <button>inside</button>
+              <button>the modal</button>
+            </form>
+          </Modal>
+        </m-hide>
+        <m-component>
+          <h3>Image Carousel</h3>
+          <DemoCarousel />
+        </m-component>
 
-        <h3>Image Carousel</h3>
-        <p> Documentation is <a href="https://www.npmjs.com/package/react-responsive-carousel">here</a></p>
-        <DemoCarousel />
-
-        <h3>Simple Dropdown menu</h3>
-        <p> Documentation is <a href="https://github.com/Fauntleroy/react-simple-dropdown">here</a></p>
-        <SimpleDropDown />
       </div>
     );
   }
