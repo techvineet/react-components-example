@@ -23,15 +23,15 @@ export default class DemoCarousel extends Component {
     return (
       <Carousel axis="horizontal" showThumbs={false} showArrows={true} onChange={this.onChange} onClickItem={this.onClickItem} dynamicHeight emulateTouch>
           <div>
-              <img src={image1} />
+              <img src={image1} alt="1" />
               <p className="legend">Legend 1</p>
           </div>
           <div>
-              <img src={image2} />
+              <img src={image2} alt="2" />
               <p className="legend">Legend 2</p>
           </div>
           <div>
-              <img src={image3} />
+              <img src={image3} alt="3" />
               <p className="legend">Legend 3</p>
           </div>
       </Carousel>
