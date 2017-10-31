@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Dropdown, { DropdownTrigger, DropdownContent } from 'react-simple-dropdown';
 
-export default class SimpleDropDown extends Component {
+export default class DropdownPageProspectsViewChat extends Component {
 
   render() {
     return (
@@ -11,22 +11,13 @@ export default class SimpleDropDown extends Component {
               <div className="wrap-content">
                 <ul>
                     <li>
-                        <a href="/profile"><i className="i-attachment"></i>Attach to rental</a>
-                    </li>
-                    <li>
-                        <a href="/favorites"><i className="i-download"></i>Download</a>
-                    </li>
-                    <li>
-                        <a href="/logout"><i className="i-view-simple"></i>View</a>
-                    </li>
-                    <li>
-                        <a href="/logout"><i className="i-edit"></i>Edit</a>
+                        <a href="/profile"><i className="i-message"></i>Chat</a>
                     </li>
                     <li>
                         <a href="/logout"><i className="i-printer"></i>Print</a>
                     </li>
                     <li>
-                        <a href="/logout"><i className="i-delete"></i>Delete</a>
+                        <a href="/logout"><i className="i-archive"></i>Archive</a>
                     </li>
                 </ul>
               </div>

@@ -7,6 +7,10 @@
 
 h3{
   text-align: left;
+  font-size: 18px;
+}
+h3 em{
+  font-size: 14px;
 }
 
 m-component{
@@ -66,7 +70,7 @@ m-component {
   to { transform: rotate(360deg); }
 }
 
-
+//!!!Only for testing. do not copy this
 //##########################################
 // Dropdown
 
@@ -100,19 +104,18 @@ font-family : 'Montserrat', sans-serif;
   font-size: 20px;
   font-weight: 400;
 }
-.dropdown__content ul{
+.dropdown__content .wrap-content{
     background-color: #fff;
       box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.15);
 min-width: 200px;
 position: relative;
   border-radius: 6px;
-  padding: 5px 0 5px 20px;
-  
-
-
+}
+.dropdown__content .wrap-content > ul{
+  padding: 5px 0 5px 20px;  
 }
 
-.dropdown__content ul:before{
+.dropdown__content .wrap-content:before{
   content: "";
   position: absolute;
   bottom: 100%;
@@ -124,13 +127,13 @@ position: relative;
   height: 0;
 
 }
-.dropdown__content ul li{
+.dropdown__content .wrap-content > ul li{
   border-bottom: 2px solid #e8e8e8;
 }
-.dropdown__content ul li:last-of-type{
+.dropdown__content .wrap-content > ul li:last-of-type{
   border-bottom: none;
 }
-.dropdown__content ul li a{
+.dropdown__content .wrap-content > ul li a{
   padding: 8px 8px 8px 0;
   font-family: Montserrat;
   font-size: 16px;
@@ -144,15 +147,15 @@ position: relative;
   display: -o-inline-flex;
   display: inline-flex;
   min-width: 100%;
+  white-space: nowrap;
 }
-.dropdown__content ul li a i{
+.dropdown__content .wrap-content > ul li a i{
   margin-right: 8px;
   font-size: 18px;
 }
-.dropdown__content ul li a i:before{
+.dropdown__content .wrap-content >  ul li a i:before{
   color: #9a9a9a;
 }
-.dropdown__content ul{}
 
 
 
@@ -187,3 +190,127 @@ position: relative;
   height: 16px;
 }
 .carousel.carousel-slider{}
+
+/* ==========================================================================
+   -- m-select
+   ========================================================================== */
+  .dropdown__content .m-select .m-select-btn{
+      text-decoration: none;
+        font-size: 15px;
+        font-weight: 400;
+   }
+   .filter-dropdown .dropdown__trigger{
+    display: block;
+    width: 35px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 22px;
+   }
+   .filter-dropdown .dropdown__trigger .i-filter:before{
+    color: #4c4c4c;
+   }
+   .filter-dropdown .dropdown--active .dropdown__trigger .i-filter:before{
+    color: #03c4eb;
+   }
+   .filter-dropdown .wrap-content{
+    padding: 20px;
+   }
+   .filter-dropdown .dropdown__content{
+      min-width: 300px;
+
+   }
+   .filter-dropdown .dropdown__content .m-select .m-select-btn.open-dropdown ~ .m-select-dropdown{
+    position: relative;
+   }
+   .filter-dropdown .filter-name {
+      font-size: 16px;
+  line-height: 1.19;
+  text-align: left;
+  color: #000000;
+  font-weight: 500;
+   }
+   .filter-dropdown .m-select .m-select-dropdown ul a {
+    font-weight: 400;
+    text-decoration: none;
+   }
+
+
+ .m-select {
+  position: relative; }
+  .m-select .m-select-btn {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    padding: 0 25px 0 20px;
+    font-size: 18px;
+    font-weight: 600;
+    text-align: left;
+    color: #4c4c4c;
+    height: 41px;
+    line-height: 39px;
+    border-radius: 8px;
+    background-color: #ffffff;
+    border: solid 1px #03c4eb; }
+    .m-select .m-select-btn i.i-arrow-down {
+      position: absolute;
+      z-index: 100;
+      top: 0;
+      bottom: 0;
+      right: 15px;
+      font-size: 8px;
+      margin: auto;
+      height: 8px;
+      width: 14px;
+      -webkit-transition: all 0.3s ease;
+      -o-transition: all 0.3s ease;
+      transition: all 0.3s ease; }
+    .m-select .m-select-btn.open-dropdown {
+      border-bottom: none;
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0; }
+      .m-select .m-select-btn.open-dropdown ~ .m-select-dropdown {
+        -webkit-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+        transition: all 0.3s ease;
+        max-height: 200px;
+        overflow-y: auto;
+        border: solid 1px #03c4eb;
+        border-top: 2px solid #f2f2f2; }
+      .m-select .m-select-btn.open-dropdown i.i-arrow-down {
+        -webkit-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+        transition: all 0.3s ease;
+        -webkit-transform: rotate(-180deg);
+        -ms-transform: rotate(-180deg);
+        transform: rotate(-180deg); }
+  .m-select .m-select-dropdown {
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    max-height: 0;
+    position: absolute;
+    z-index: 2000;
+    top: 100%;
+    left: 0;
+    right: 0;
+    width: 100%;
+    overflow: hidden;
+    background-color: #fff;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px; }
+    .m-select .m-select-dropdown ul {
+      padding: 5px 0;
+      overflow: hidden; }
+      .m-select .m-select-dropdown ul li {
+        padding: 4px 15px; }
+      .m-select .m-select-dropdown ul a {
+        display: block;
+        font-size: 14px;
+        font-weight: 600;
+        text-align: left;
+        color: #4c4c4c;
+        padding: 4px 5px; }
+
+  
+

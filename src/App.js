@@ -1,9 +1,15 @@
 import React, { Component } from 'react';
 import Modal from 'react-modal';
 
-import ExampleTabs from './components/Tabs.jsx'
-import DemoCarousel from './components/DemoCarousel.jsx'
-import SimpleDropDown from './components/SimpleDropDown.jsx'
+import ExampleTabs from './components/Tabs.jsx';
+import DemoCarousel from './components/DemoCarousel.jsx';
+import SimpleDropDown from './components/SimpleDropDown.jsx';
+import DropdownPageProspectsViewViewings from './components/DropdownPageProspectsViewViewings.jsx';
+import DropdownPageProspectsViewChat from './components/DropdownPageProspectsViewChat.jsx';
+import DropdownPageApplicantsViewMain from './components/DropdownPageApplicantsViewMain.jsx';
+import DropdownPageApplicantsViewApplications from './components/DropdownPageApplicantsViewApplications.jsx';
+import FilterDropDown from './components/FilterDropDown.jsx';
+
 
 import logo from './logo.svg';
 import './App.css';
@@ -66,6 +72,29 @@ class App extends Component {
           <SimpleDropDown />
         </m-component>
 
+        <m-component>
+          <h3>Dropdown for <br /> 
+            <em>Page Prospects-View--Viewings</em><br />
+            <em>Page Prospects-View--Notes</em><br />
+          </h3>
+          <DropdownPageProspectsViewViewings />
+        </m-component>
+
+        <m-component>
+          <h3>Dropdown for <br /> <em>Page Prospects-View--Chat</em></h3>
+          <DropdownPageProspectsViewChat />
+        </m-component>
+
+        <m-component>
+          <h3>Dropdown for <br /> <em>Page Applicants-View-Main</em></h3>
+          <DropdownPageApplicantsViewMain />
+        </m-component>
+
+        <m-component>
+          <h3>Dropdown for <br /> <em>Page Applicants-View-Applications</em></h3>
+          <DropdownPageApplicantsViewApplications />
+        </m-component>
+
         <m-hide>
         <h3>Modal Dialog Box component</h3>
           <button onClick={this.openModal}>Open Modal</button>
@@ -94,7 +123,12 @@ class App extends Component {
           <h3>Image Carousel</h3>
           <DemoCarousel />
         </m-component>
-
+        <m-component>
+          <h3>FilterDropdown</h3>
+          <div className="filter-dropdown">
+            <FilterDropDown />
+          </div>
+        </m-component>
       </div>
     );
   }
