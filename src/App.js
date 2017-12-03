@@ -6,8 +6,10 @@ import DemoCarousel from './components/DemoCarousel.jsx';
 import SimpleDropDown from './components/SimpleDropDown.jsx';
 import DropdownPageProspectsViewViewings from './components/DropdownPageProspectsViewViewings.jsx';
 import DropdownPageProspectsViewChat from './components/DropdownPageProspectsViewChat.jsx';
+import DropdownPageProspectsViewMain from './components/DropdownPageProspectsViewMain.jsx';
 import DropdownPageApplicantsViewMain from './components/DropdownPageApplicantsViewMain.jsx';
 import DropdownPageApplicantsViewApplications from './components/DropdownPageApplicantsViewApplications.jsx';
+import DropdownPageRentalApplicationViewEmploymentHistory from './components/DropdownPageRentalApplicationViewEmploymentHistory.jsx';
 import FilterDropDown from './components/FilterDropDown.jsx';
 
 
@@ -81,6 +83,11 @@ class App extends Component {
         </m-component>
 
         <m-component>
+          <h3>Dropdown for <br /> <em>Page Prospects-View--Main</em></h3>
+          <DropdownPageProspectsViewMain />
+        </m-component>
+
+        <m-component>
           <h3>Dropdown for <br /> <em>Page Prospects-View--Chat</em></h3>
           <DropdownPageProspectsViewChat />
         </m-component>
@@ -93,6 +100,11 @@ class App extends Component {
         <m-component>
           <h3>Dropdown for <br /> <em>Page Applicants-View-Applications</em></h3>
           <DropdownPageApplicantsViewApplications />
+        </m-component>
+
+        <m-component>
+          <h3>Dropdown for <br /> <em>Page Rental-Application-View--Employment-History</em></h3>
+          <DropdownPageRentalApplicationViewEmploymentHistory />
         </m-component>
 
         <m-hide>

@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'baserent';
-  src:  url('fonts/baserent.eot?y9jqi9');
-  src:  url('fonts/baserent.eot?y9jqi9#iefix') format('embedded-opentype'),
-    url('fonts/baserent.ttf?y9jqi9') format('truetype'),
-    url('fonts/baserent.woff?y9jqi9') format('woff'),
-    url('fonts/baserent.svg?y9jqi9#baserent') format('svg');
+  src:  url('fonts/baserent.eot?mzkk7o');
+  src:  url('fonts/baserent.eot?mzkk7o#iefix') format('embedded-opentype'),
+    url('fonts/baserent.ttf?mzkk7o') format('truetype'),
+    url('fonts/baserent.woff?mzkk7o') format('woff'),
+    url('fonts/baserent.svg?mzkk7o#baserent') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -24,6 +24,21 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.i-file-information:before {
+  content: "\e90e";
+}
+.i-file-text-data:before {
+  content: "\e90c";
+}
+.i-file-question:before {
+  content: "\e90d";
+}
+.i-file-check:before {
+  content: "\e90b";
+}
+.i-arrow-left:before {
+  content: "\e90a";
+}
 .i-send:before {
   content: "\e909";
 }
